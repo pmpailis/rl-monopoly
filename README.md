@@ -7,8 +7,8 @@ In this version ( alpha ) the environment and the agent are fully functional and
 
 Moving towards beta version :
 
--Massive improvements on GUI
--Update project so that it works on a server/client protocol.
--Enable user to change settings dynamically
+- Massive improvements on GUI 
+- Update project so that it works on a server/client protocol.
+- Enable user to change settings dynamically
 
 Uploading alpha version on : 31/10/13
