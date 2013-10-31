@@ -1,0 +1,148 @@
+﻿<Window x:Class="Monopoly.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Monopoly" Height="841" Width="872" ResizeMode="NoResize">
+    <Grid x:Name="mainGrid">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="650" />
+            <RowDefinition Height="150" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="700" />
+            <ColumnDefinition Width="150" />
+        </Grid.ColumnDefinitions>
+        
+        
+        <Grid x:Name="boardGrid" Grid.Column="0" Grid.Row="0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="29" />
+                <ColumnDefinition Width="29" />
+                <ColumnDefinition Width="17" />
+                <ColumnDefinition Width="21" />
+                <ColumnDefinition Width="56" />
+                <ColumnDefinition Width="56" />
+                <ColumnDefinition Width="55" />
+                <ColumnDefinition Width="55" />
+                <ColumnDefinition Width="55" />
+                <ColumnDefinition Width="56" />
+                <ColumnDefinition Width="54" />
+                <ColumnDefinition Width="55" />
+                <ColumnDefinition Width="57" />
+                <ColumnDefinition Width="19" />
+                <ColumnDefinition Width="20" />
+                <ColumnDefinition Width="24" />
+                <ColumnDefinition Width="42" />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="34*" />
+                <RowDefinition Height="25*" />
+                <RowDefinition Height="20*" />
+                <RowDefinition Height="17*" />
+                <RowDefinition Height="51" />
+                <RowDefinition Height="51" />
+                <RowDefinition Height="52" />
+                <RowDefinition Height="52" />
+                <RowDefinition Height="50" />
+                <RowDefinition Height="52" />
+                <RowDefinition Height="51" />
+                <RowDefinition Height="52" />
+                <RowDefinition Height="52" />
+                <RowDefinition Height="18" />
+                <RowDefinition Height="18" />
+                <RowDefinition Height="25" />
+                <RowDefinition Height="30" />
+            </Grid.RowDefinitions>
+            <Image Source="Images/Monopoly_board.jpg" Stretch="Fill" Grid.RowSpan="17" Grid.ColumnSpan="17" Name="mainBackground" />
+
+            <Image Grid.Column="14" Grid.Row="15" Grid.ColumnSpan="2" Name="pos0" />
+            <Image Grid.Column="12" Grid.Row="15" Name="pos1" />
+            <Image Grid.Column="11" Grid.Row="15" Name="pos2" />
+            <Image Grid.Column="10" Grid.Row="15" Name="pos3" />
+            <Image Grid.Column="9" Grid.Row="15" Name="pos4" />
+            <Image Grid.Column="8" Grid.Row="15" Name="pos5" />
+            <Image Grid.Column="7" Grid.Row="15" Name="pos6" />
+            <Image Grid.Column="6" Grid.Row="15" Name="pos7" />
+            <Image Grid.Column="5" Grid.Row="15" Name="pos8" />
+            <Image Grid.Column="4" Grid.Row="15" Name="pos9" />
+            <Image Grid.Column="1" Grid.Row="15" Name="pos10" Grid.ColumnSpan="2" />
+            <Image Grid.Column="1" Grid.Row="12" Name="pos11" />
+            <Image Grid.Column="1" Grid.Row="11" Name="pos12" />
+            <Image Grid.Column="1" Grid.Row="10" Name="pos13" />
+            <Image Grid.Column="1" Grid.Row="9" Name="pos14" />
+            <Image Grid.Column="1" Grid.Row="8" Name="pos15" />
+            <Image Grid.Column="1" Grid.Row="7" Name="pos16" />
+            <Image Grid.Column="1" Grid.Row="6" Name="pos17" />
+            <Image Grid.Column="1" Grid.Row="5" Name="pos18" />
+            <Image Grid.Column="1" Grid.Row="4" Name="pos19" />
+            <Image Grid.Column="1" Grid.Row="1" Name="pos20" Grid.ColumnSpan="2" />
+            <Image Grid.Column="4" Grid.Row="1" Name="pos21" />
+            <Image Grid.Column="5" Grid.Row="1" Name="pos22" />
+            <Image Grid.Column="6" Grid.Row="1" Name="pos23" />
+            <Image Grid.Column="7" Grid.Row="1" Name="pos24" />
+            <Image Grid.Column="8" Grid.Row="1" Name="pos25" />
+            <Image Grid.Column="9" Grid.Row="1" Name="pos26" />
+            <Image Grid.Column="10" Grid.Row="1" Name="pos27" />
+            <Image Grid.Column="11" Grid.Row="1" Name="pos28" />
+            <Image Grid.Column="12" Grid.Row="1" Name="pos29" />
+            <Image Grid.Column="14" Grid.Row="1" Name="pos30" Margin="1,0,0,0" Grid.ColumnSpan="2" />
+            <Image Grid.Column="15" Grid.Row="4" Name="pos31" VerticalAlignment="Stretch" />
+            <Image Grid.Column="15" Grid.Row="5" Name="pos32" VerticalAlignment="Stretch" />
+            <Image Grid.Column="15" Grid.Row="6" Name="pos33" VerticalAlignment="Stretch" />
+            <Image Grid.Column="15" Grid.Row="7" Name="pos34" VerticalAlignment="Stretch" />
+            <Image Grid.Column="15" Grid.Row="8" Name="pos35" VerticalAlignment="Stretch" />
+            <Image Grid.Column="15" Grid.Row="9" Name="pos36" VerticalAlignment="Stretch" />
+            <Image Grid.Column="15" Grid.Row="10" Name="pos37" VerticalAlignment="Stretch" />
+            <Image Grid.Column="15" Grid.Row="11" Name="pos38" VerticalAlignment="Stretch" />
+            <Image Grid.Column="15" Grid.Row="12" Name="pos39" VerticalAlignment="Stretch" />
+
+        </Grid>
+
+        <Grid x:Name="actionGrid" Grid.Column="1">
+            <Grid.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="White" Offset="0" />
+                    <GradientStop Color="White" Offset="1" />
+                    <GradientStop Color="#FFADADAD" Offset="0.523" />
+                </LinearGradientBrush>
+            </Grid.Background>
+            <TextBox x:Name="stateInfo_tb" TextWrapping="Wrap" Margin="0,0,621,0">
+
+            </TextBox>
+            <Button Content="Start the game" Height="39" HorizontalAlignment="Left" Margin="21,20,0,0" Name="moveBt" VerticalAlignment="Top" Width="105" Click="moveBt_Click" />
+            <Button Content="Next move" Height="39" HorizontalAlignment="Left" Margin="21,75,0,0" Name="button1" VerticalAlignment="Top" Width="105" Click="button1_Click" />
+            <TextBlock Height="526" HorizontalAlignment="Left" Margin="0,124,0,0" Name="obsInfo" Text="" VerticalAlignment="Top" Width="150" TextWrapping="Wrap" />
+        </Grid>
+        
+        <Grid x:Name="infoGrid" Grid.Row="1">
+            <Grid.Background>
+                <LinearGradientBrush EndPoint="1,0.5" StartPoint="0,0.5">
+                    <GradientStop Color="White" Offset="0" />
+                    <GradientStop Color="White" Offset="1" />
+                    <GradientStop Color="#FFADADAD" Offset="0.523" />
+                </LinearGradientBrush>
+            </Grid.Background>
+            <TextBlock Height="25" HorizontalAlignment="Left" Margin="6,12,0,0" Name="currentPlayerTbl" Text="Current playing : " VerticalAlignment="Top" Width="100" TextAlignment="Center" />
+            <TextBlock Height="25" HorizontalAlignment="Left" Margin="6,50,0,0" Name="cardsOfPlayerTbl" Text="Cards of current player : " TextAlignment="Center" VerticalAlignment="Top" Width="137" />
+            <TextBlock Height="25" HorizontalAlignment="Left" Margin="333,12,0,0" Name="playerMoneyTbl" Text="Money of current player : " TextAlignment="Center" VerticalAlignment="Top" Width="150" />
+            <TextBlock Height="25" HorizontalAlignment="Left" Margin="6,84,0,0" Name="playerBuildingsTbl" Text="Buildings of current player : " TextAlignment="Center" VerticalAlignment="Top" Width="156" />
+
+            <TextBlock Height="25" HorizontalAlignment="Left" Margin="112,12,0,0" Name="playerNameTb" VerticalAlignment="Top" Width="Auto" MaxWidth="200" />
+            <TextBlock Height="25" HorizontalAlignment="Left" Margin="481,12,0,0" Name="playerMoneyTb" VerticalAlignment="Top" Width="Auto" MaxWidth="100" />
+            <TextBlock Height="25" HorizontalAlignment="Left" Margin="162,48,0,0" Name="playerCardsTb" VerticalAlignment="Top" Width="Auto" MaxWidth="400" />
+            <TextBlock Height="25" HorizontalAlignment="Left" Margin="181,84,0,0" MaxWidth="200" Name="playerBuildingsTb" VerticalAlignment="Top" Width="Auto" />
+            <Button Content="Buy" Height="23" HorizontalAlignment="Left" Margin="225,126,0,0" Name="buyBt" VerticalAlignment="Top" Width="75" />
+            <Button Content="Sell" Height="23" HorizontalAlignment="Left" Margin="356,126,0,0" Name="sellBt" VerticalAlignment="Top" Width="75" />
+            <Button Content="Do nothing" Height="23" HorizontalAlignment="Left" Margin="494,126,0,0" Name="passBt" VerticalAlignment="Top" Width="75" />
+            <TextBlock Height="25" HorizontalAlignment="Left" Margin="132,12,0,0" Name="textBlock1" Text="Player1" TextAlignment="Center" VerticalAlignment="Top" Width="150" />
+            <TextBlock Height="25" HorizontalAlignment="Left" Margin="162,43,0,0" Name="textBlock2" Text="1,4,5,8,14" TextAlignment="Center" VerticalAlignment="Top" Width="150" />
+            <TextBlock Height="25" HorizontalAlignment="Left" Margin="181,74,0,0" Name="textBlock3" Text="None" TextAlignment="Center" VerticalAlignment="Top" Width="150" />
+            <TextBlock Height="25" HorizontalAlignment="Left" Margin="472,12,0,0" Name="textBlock4" Text="1365" TextAlignment="Center" VerticalAlignment="Top" Width="150" />
+        </Grid>
+        
+        <Grid x:Name="currentCardGrid" Grid.Row="1" Grid.Column="1">
+            <TextBlock Height="37" HorizontalAlignment="Left"  Name="backgroundTb" VerticalAlignment="Top" Width="145" />
+            <TextBlock Height="77" HorizontalAlignment="Left"  Name="cardInfoTb" VerticalAlignment="Top" Width="145" Margin="0,43,0,0" />
+            <TextBlock Height="27" HorizontalAlignment="Left" Margin="-1,122,0,0" Name="cardOwnerTb" VerticalAlignment="Top" Width="145" />
+        </Grid>
+    </Grid>
+</Window>

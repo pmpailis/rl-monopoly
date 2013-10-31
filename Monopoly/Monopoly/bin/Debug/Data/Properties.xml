@@ -1,0 +1,313 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Properties>
+  
+  <Property>
+    <Name>Mediterranean Avenue</Name>
+    <Position>1</Position>
+    <Price>60</Price>
+    <Rent>2,10,30,90,160,250</Rent>
+    <Mortage>30</Mortage>
+    <HouseCost>50</HouseCost>
+    <HotelCost>50</HotelCost>
+    <Group>2</Group>
+  </Property>
+  <Property>
+    <Name>Batlic Avenue</Name>
+    <Position>3</Position>
+    <Price>60</Price>
+    <Rent>4,20,60,180,320,450</Rent>
+    <Mortage>30</Mortage>
+    <HouseCost>50</HouseCost>
+    <HotelCost>50</HotelCost>
+    <Group>2</Group>
+  </Property>
+     
+  
+  <Property>
+    <Name>Reading Railroad</Name>
+    <Position>5</Position>
+    <Price>200</Price>
+    <Rent>25,50,100,200</Rent>
+    <Mortage>100</Mortage>
+    <HouseCost>0</HouseCost>
+    <HotelCost>0</HotelCost>
+    <Group>1</Group>
+  </Property>
+    
+  
+  <Property>
+   <Name>Oriental Avenue</Name>
+    <Position>6</Position>
+    <Price>100</Price>
+   <Rent>6,30,90,270,400,550</Rent>
+    <Mortage>50</Mortage>
+    <HouseCost>50</HouseCost>
+   <HotelCost>50</HotelCost>
+   <Group>3</Group>
+  </Property>
+  <Property>
+    <Name>Vermont Avenue</Name>
+    <Position>8</Position>
+    <Price>100</Price>
+    <Rent>6,30,90,270,400,550</Rent>
+    <Mortage>50</Mortage>
+    <HouseCost>50</HouseCost>
+    <HotelCost>50</HotelCost>
+    <Group>3</Group>
+  </Property>
+  <Property>
+    <Name>Connencticut Avenue</Name>
+    <Position>9</Position>
+    <Price>120</Price>
+    <Rent>8,40,100,300,450,600</Rent>
+    <Mortage>60</Mortage>
+    <HouseCost>50</HouseCost>
+    <HotelCost>50</HotelCost>
+    <Group>3</Group>
+  </Property>
+
+  
+  <Property>
+    <Name>St.Charles Place</Name>
+    <Position>11</Position>
+    <Price>140</Price>
+    <Rent>10,50,15,450,625,750</Rent>
+    <Mortage>70</Mortage>
+    <HouseCost>100</HouseCost>
+    <HotelCost>100</HotelCost>
+    <Group>4</Group>
+  </Property>
+  
+  
+    <Property>
+    <Name>Electric Company</Name>
+    <Position>12</Position>
+    <Price>150</Price>
+    <Rent>4,10</Rent>
+    <Mortage>75</Mortage>
+    <HouseCost>0</HouseCost>
+    <HotelCost>0</HotelCost>
+    <Group>0</Group>
+  </Property>
+    
+    
+  <Property>
+    <Name>States Avenue</Name>
+    <Position>13</Position>
+    <Price>140</Price>
+    <Rent>10,50,150,450,625,750</Rent>
+    <Mortage>70</Mortage>
+    <HouseCost>100</HouseCost>
+    <HotelCost>100</HotelCost>
+    <Group>4</Group>
+  </Property>
+  <Property>
+    <Name>Virginia Avenue</Name>
+    <Position>14</Position>
+    <Price>160</Price>
+    <Rent>12,60,180,500,700,900</Rent>
+    <Mortage>80</Mortage>
+    <HouseCost>100</HouseCost>
+    <HotelCost>100</HotelCost>
+    <Group>4</Group>
+  </Property>
+
+   <Property>
+    <Name>Pennsylvania Railroad</Name>
+    <Position>15</Position>
+    <Price>200</Price>
+    <Rent>25,50,100,200</Rent>
+    <Mortage>100</Mortage>
+    <HouseCost>0</HouseCost>
+    <HotelCost>0</HotelCost>
+    <Group>1</Group>
+  </Property>    
+    
+  <Property>
+    <Name>St.James Place</Name>
+    <Position>16</Position>
+    <Price>180</Price>
+    <Rent>14,70,200,550,750,950</Rent>
+    <Mortage>90</Mortage>
+    <HouseCost>100</HouseCost>
+    <HotelCost>100</HotelCost>
+    <Group>5</Group>
+  </Property>
+  <Property>
+    <Name>Tennessee Avenue</Name>
+    <Position>18</Position>
+    <Price>180</Price>
+    <Rent>14,70,200,550,750,950</Rent>
+    <Mortage>90</Mortage>
+    <HouseCost>100</HouseCost>
+    <HotelCost>100</HotelCost>
+    <Group>5</Group>
+  </Property>
+  <Property>
+    <Name>New York Avenue</Name>
+    <Position>19</Position>
+    <Price>200</Price>
+    <Rent>16,80,220,600,800,100</Rent>
+    <Mortage>100</Mortage>
+    <HouseCost>100</HouseCost>
+    <HotelCost>100</HotelCost>
+    <Group>5</Group>
+  </Property>
+  
+  <Property>
+    <Name>Kentucky Avenue</Name>
+    <Position>21</Position>
+    <Price>220</Price>
+    <Rent>18,90,250,700,875,1050</Rent>
+    <Mortage>110</Mortage>
+    <HouseCost>150</HouseCost>
+    <HotelCost>150</HotelCost>
+    <Group>6</Group>
+  </Property>
+  <Property>
+    <Name>Indiana Avenue</Name>
+    <Position>23</Position>
+    <Price>220</Price>
+    <Rent>18,90,250,700,875,1050</Rent>
+    <Mortage>110</Mortage>
+    <HouseCost>150</HouseCost>
+    <HotelCost>150</HotelCost>
+    <Group>6</Group>
+  </Property>
+  <Property>
+    <Name>Illinois Avenue</Name>
+    <Position>24</Position>
+    <Price>240</Price>
+    <Rent>20,100,300,750,925,1100</Rent>
+    <Mortage>120</Mortage>
+    <HouseCost>150</HouseCost>
+    <HotelCost>150</HotelCost>
+    <Group>6</Group>
+  </Property>
+  
+  
+    <Property>
+      <Name>BO Railroad</Name>
+      <Position>25</Position>
+      <Price>200</Price>
+      <Rent>25,50,100,200</Rent>
+      <Mortage>100</Mortage>
+      <HouseCost>0</HouseCost>
+      <HotelCost>0</HotelCost>
+      <Group>1</Group>
+    </Property> 
+      
+      
+  <Property>
+    <Name>Atlantic Avenue</Name>
+    <Position>26</Position>
+    <Price>260</Price>
+    <Rent>22,110,330,800,975,1150</Rent>
+    <Mortage>130</Mortage>
+    <HouseCost>150</HouseCost>
+    <HotelCost>150</HotelCost>
+    <Group>7</Group>
+  </Property>
+  <Property>
+    <Name>Ventnor Avenue</Name>
+    <Position>27</Position>
+    <Price>260</Price>
+    <Rent>22,110,330,800,975,1150</Rent>
+    <Mortage>130</Mortage>
+    <HouseCost>150</HouseCost>
+    <HotelCost>150</HotelCost>
+    <Group>7</Group>
+  </Property>
+  
+  
+  <Property>
+      <Name>Water Works</Name>
+      <Position>28</Position>
+      <Price>150</Price>
+      <Rent>4,10</Rent>
+      <Mortage>100</Mortage>
+      <HouseCost>0</HouseCost>
+      <HotelCost>0</HotelCost>y 
+      <Group>0</Group>
+    </Property>
+  
+  
+    <Property>
+    <Name>Marvin Gardens</Name>
+    <Position>29</Position>
+    <Price>280</Price>
+    <Rent>24,120,360,850,1025,1200</Rent>
+    <Mortage>140</Mortage>
+    <HouseCost>150</HouseCost>
+    <HotelCost>150</HotelCost>
+    <Group>7</Group>
+  </Property>
+
+
+  <Property>
+    <Name>Pacific Avenue</Name>
+    <Position>31</Position>
+    <Price>300</Price>
+    <Rent>26,130,390,900,1100,1275</Rent>
+    <Mortage>150</Mortage>
+    <HouseCost>200</HouseCost>
+    <HotelCost>200</HotelCost>
+    <Group>8</Group>
+  </Property>
+  <Property>
+    <Name>North Carolina Avenue</Name>
+    <Position>32</Position>
+    <Price>300</Price>
+    <Rent>26,130,390,900,1100,1275</Rent>
+    <Mortage>150</Mortage>
+    <HouseCost>200</HouseCost>
+    <HotelCost>200</HotelCost>
+    <Group>8</Group>
+  </Property>
+  <Property>
+    <Name>Pensylvania Avenue</Name>
+    <Position>34</Position>
+    <Price>320</Price>
+    <Rent>28,150,450,1000,1200,1400</Rent>
+    <Mortage>160</Mortage>
+    <HouseCost>200</HouseCost>
+    <HotelCost>200</HotelCost>
+    <Group>8</Group>
+  </Property>
+
+  
+    <Property>
+      <Name>Short Line</Name>
+      <Position>35</Position>
+      <Price>200</Price>
+      <Rent>25,50,100,200</Rent>
+      <Mortage>100</Mortage>
+      <HouseCost>0</HouseCost>
+      <HotelCost>0</HotelCost>
+      <Group>1</Group>
+    </Property>
+
+
+    <Property>
+    <Name>Park Place</Name>
+    <Position>37</Position>
+    <Price>350</Price>
+    <Rent>35,175,500,1100,1300,1500</Rent>
+    <Mortage>175</Mortage>
+    <HouseCost>200</HouseCost>
+    <HotelCost>200</HotelCost>
+    <Group>9</Group>
+  </Property>
+  <Property>
+    <Name>Boardwalk</Name>
+    <Position>39</Position>
+    <Price>400</Price>
+    <Rent>50,200,600,1400,1700,2000</Rent>
+    <Mortage>200</Mortage>
+    <HouseCost>200</HouseCost>
+    <HotelCost>200</HotelCost>
+    <Group>9</Group>
+  </Property>
+
+
+</Properties>
