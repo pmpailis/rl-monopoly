@@ -1,9 +1,9 @@
  RLMonopoly
 =================
 
-RLMonopoly is a Reinforcment Learning library for the famous board game Monopoly. It is developed in .NET 3.5 Framework using C#.
+RLMonopoly is a Reinforcement Learning library for the famous board game Monopoly. It is developed in .NET 3.5 using C#.
 
-In this version ( alpha ) the environment and the agent are fully functional and working but the GUI is not actively bound to the procedures running in the background.
+In this version ( alpha ) the environment and the agent are fully functional but the GUI is not actively bound to the procedures running in the background.
 
 Moving towards beta version :
 
