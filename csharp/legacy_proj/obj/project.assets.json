@@ -694,11 +694,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/media/alduin/shared_ssd/Linux/workspace/github/rl-monopoly/rl-monopoly.csproj",
+      "projectUniqueName": "/media/alduin/shared_ssd/Linux/workspace/github/rl-monopoly/csharp/legacy_proj/rl-monopoly.csproj",
       "projectName": "rl-monopoly",
-      "projectPath": "/media/alduin/shared_ssd/Linux/workspace/github/rl-monopoly/rl-monopoly.csproj",
+      "projectPath": "/media/alduin/shared_ssd/Linux/workspace/github/rl-monopoly/csharp/legacy_proj/rl-monopoly.csproj",
       "packagesPath": "/home/alduin/.nuget/packages/",
-      "outputPath": "/media/alduin/shared_ssd/Linux/workspace/github/rl-monopoly/obj/",
+      "outputPath": "/media/alduin/shared_ssd/Linux/workspace/github/rl-monopoly/csharp/legacy_proj/obj/",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "/usr/share/dotnet/sdk/NuGetFallbackFolder"
