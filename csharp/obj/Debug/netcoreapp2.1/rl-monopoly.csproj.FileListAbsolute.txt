@@ -1,0 +1,6 @@
+/media/alduin/shared_ssd/Linux/workspace/github/rl-monopoly/obj/Debug/netcoreapp2.1/rl-monopoly.csprojAssemblyReference.cache
+/media/alduin/shared_ssd/Linux/workspace/github/rl-monopoly/obj/Debug/netcoreapp2.1/rl_monopoly.Monopoly.Monopoly.Properties.Resources.resources
+/media/alduin/shared_ssd/Linux/workspace/github/rl-monopoly/obj/Debug/netcoreapp2.1/rl-monopoly.csproj.GenerateResource.cache
+/media/alduin/shared_ssd/Linux/workspace/github/rl-monopoly/obj/Debug/netcoreapp2.1/rl-monopoly.csproj.CoreCompileInputs.cache
+/media/alduin/shared_ssd/Linux/workspace/github/rl-monopoly/obj/Debug/netcoreapp2.1/rl-monopoly.AssemblyInfoInputs.cache
+/media/alduin/shared_ssd/Linux/workspace/github/rl-monopoly/obj/Debug/netcoreapp2.1/rl-monopoly.AssemblyInfo.cs
