@@ -1,0 +1,281 @@
+[
+      {
+        "card_type": "community_chest",
+        "text": "Advance to Go (collect $200)",
+        "movement": {
+        	"fixed": "go"
+        }
+      },
+      {
+        "card_type": "community_chest",
+        "text": "Bank error in your favor – collect $75",
+        "transaction": {
+        	"amount": 75,
+        	"type": "collect",
+        	"source": "bank"
+        }
+      },
+      {
+        "card_type": "community_chest",
+        "text": "Doctor's fees - Pay $50",
+         "transaction": {
+        	"amount": 50,
+        	"type": "pay",
+        	"destination": "bank"
+        }
+      },
+      {
+        "card_type": "community_chest",
+        "text": "Go directly to jail – do not pass Go and do not collect $200",
+        "special": {
+        	"jail": true
+        }
+      },
+      {
+        "card_type": "community_chest",
+        "text": "Grand Opera Night – collect $50 from every player for opening night seats",
+        "transaction": {
+        	"amount": 75,
+        	"type": "collect",
+        	"source": "player"
+        }
+      },
+      {
+        "card_type": "community_chest",
+        "text": "Income Tax refund – collect $20",
+        "transaction": {
+        	"amount": 20,
+        	"type": "collect",
+        	"source": "bank"
+        }
+      },
+      {
+        "card_type": "community_chest",
+        "text": "Life Insurance Matures – collect $100",
+        "transaction": {
+        	"amount": 100,
+        	"type": "collect",
+        	"source": "bank"
+        }
+      },
+      {
+        "card_type": "community_chest",
+        "text": "Pay Hospital Fees of $100",
+        "transaction": {
+        	"amount": 100,
+        	"type": "pay",
+        	"destination": "bank"
+        }
+      },
+      {
+        "card_type": "community_chest",
+        "text": "Pay School Fees of $50",
+        "transaction": {
+        	"amount": 50,
+        	"type": "pay",
+        	"destination": "bank"
+        }
+      },
+      {
+        "card_type": "community_chest",
+        "text": "Receive $25 Consultancy Fee",
+        "transaction": {
+        	"amount": 25,
+        	"type": "collect",
+        	"source": "bank"
+        }
+      },
+      {
+        "card_type": "community_chest",
+        "text": "You are assessed for street repairs – $40 per house, $115 per hotel",
+        "transaction": {
+        	"house_cost": 40,
+        	"hotel_cost": 115,
+        	"type": "pay",
+        	"destination": "bank"
+        }
+      },
+      {
+        "card_type": "community_chest",
+        "text": "You have won second prize in a beauty contest– collect $10",
+        "transaction": {
+        	"amount": 10,
+        	"type": "collect",
+        	"source": "bank"
+        }
+      },
+      {
+        "card_type": "community_chest",
+        "text": "You inherit $100",
+        "transaction": {
+        	"amount": 100,
+        	"type": "collect",
+        	"source": "bank"
+        }
+      },
+      {
+        "card_type": "community_chest",
+        "text": "From sale of stock you get $50",
+        "transaction": {
+        	"amount": 50,
+        	"type": "collect",
+        	"source": "bank"
+        }
+      },
+      {
+        "card_type": "community_chest",
+        "text": "Holiday Fund matures - Receive $100 ",
+        "transaction": {
+        	"amount": 100,
+        	"type": "collect",
+        	"source": "bank"
+        }
+      },
+      {
+        "card_type": "chance",
+        "text": "Advance to Go (collect $200)",
+        "movement": {
+        	"fixed": "go"
+        },
+        "transaction": {
+        	"amount": 200,
+        	"type": "collect",
+        	"source": "bank"
+        }
+
+      },
+      {
+        "card_type": "chance",
+        "text": "Advance to Illinois Avenue",
+        "movement": {
+        	"fixed": "illinois_avenue"
+        }
+      },
+      {
+        "card_type": "chance",
+        "text": "Advance token to nearest Utility. If unowned, you may buy it from the Bank. If owned, throw dice and pay owner a total ten times the amount thrown.",
+        "movement": {
+          "relative": {
+            "type": "nearest",
+            "group": "utilities"
+          }
+        },
+        "transaction":{
+        	"special": {
+        		"amount_source": "dice",
+        		"factor": 10
+        	}
+        }
+      },
+      {
+        "card_type": "chance",
+        "text": "Advance token to the nearest Railroad and pay owner twice the rental to which he/she is otherwise entitled. If Railroad is unowned, you may buy it from the Bank.",
+        "relative": {
+        	"type": "nearest",
+        	"group": "railways"
+        },
+        "transaction":{
+        	"special": {
+        		"amount_source": "rent",
+        		"factor": 2
+        	}
+        }
+      },
+      {
+        "card_type": "chance",
+        "text": "Advance to St. Charles Place – if you pass Go, collect $200",
+        "movement": {
+        	"fixed": "st_charles_place"
+        }
+      },
+      {
+        "card_type": "chance",
+        "text": "Bank pays you dividend of $50",
+        "transaction": {
+        	"amount": 50,
+        	"type": "collect",
+        	"source": "bank"
+        }
+      },
+      {
+        "card_type": "chance",
+        "text": "Go back 3 spaces",
+        "movement":{
+          "relative": {
+        	 "position": -3,
+          }
+        },
+      },
+      {
+        "card_type": "chance",
+        "text": "Go directly to jail – do not pass Go and do not collect $200",
+        "special": {
+        	"jail": true
+        }
+      },
+      {
+        "card_type": "chance",
+        "text": "Make general repairs on all your property – for each house pay $25 – for each hotel $100",
+        "transaction": {
+        	"house_cost": 25,
+        	"hotel_cost": 100,
+        	"type": "pay",
+        	"destination": "bank"
+        }
+      },
+      {
+        "card_type": "chance",
+        "text": "Pay poor tax of $15",
+        "transaction": {
+        	"amount": 15,
+        	"type": "pay",
+        	"destination": "bank"
+        }
+      },
+      {
+        "card_type": "chance",
+        "text": "Take a trip to Reading Railroad – if you pass Go collect $200",
+        "movement": {
+        	"fixed": "reading_railroad"
+        },
+        "transaction": {
+        	"amount": 200,
+        	"type": "collect",
+        	"source": "bank"
+        }
+      },
+      {
+        "card_type": "chance",
+        "text": "Take a walk on the Boardwalk – advance token to Boardwalk",
+        "movement": {
+        	"fixed": "boardwalk"
+        },
+      },
+      {
+        "card_type": "chance",
+        "text": "Your building loan matures – collect $150",
+        "transaction": {
+        	"amount": 150,
+        	"type": "collect",
+        	"source": "bank"
+        }
+      },
+      {
+        "card_type": "chance",
+        "text": "You have been elected chairman of the board – pay each player $50",
+        "transaction": {
+        	"amount": 50,
+        	"type": "pay",
+        	"destination": "players"
+        }
+      },
+      {
+        "card_type": "chance",
+        "text": "You have won a crossword competition - collect $100",
+        "transaction": {
+        	"amount": 100,
+        	"type": "collect",
+        	"source": "bank"
+        }
+      }
+]
