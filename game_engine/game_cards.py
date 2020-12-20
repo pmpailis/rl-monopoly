@@ -1,6 +1,6 @@
 from typing import Any, Dict
 
-from state import GameState
+from monopoly import Monopoly
 
 
 class GameCardProperties:
@@ -50,25 +50,25 @@ class GameCard(object):
         movement_conf = conf[GameCardProperties.MOVEMENT]
         if GameCardProperties.MOVEMENT_FIXED in movement_conf:
             place = movement_conf[GameCardProperties.MOVEMENT_FIXED]
-            GameState.move_current_player_place(place)
+            Monopoly.get_instance().move_current_player_to_place(place)
         elif GameCardProperties.MOVEMENT_RELATIVE in movement_conf:
             relative_movement_conf = movement_conf[GameCardProperties.MOVEMENT_RELATIVE]
             if GameCardProperties.MOVEMENT_RELATIVE_POSITION in relative_movement_conf:
                 position = relative_movement_conf[GameCardProperties.MOVEMENT_RELATIVE_POSITION]
-                GameState.move_current_player_position(position)
+                Monopoly.get_instance().move_current_player_to_position(position)
             else:
                 movement_type = relative_movement_conf[GameCardProperties.MOVEMENT_RELATIVE_TYPE]
                 movement_group = relative_movement_conf[GameCardProperties.MOVEMENT_RELATIVE_GROUP]
-                GameState.move_current_player_group(movement_type, movement_group)
-                if GameState.is_owned_by_other():
+                Monopoly.get_instance().move_current_player_group(movement_type, movement_group)
+                if Monopoly.get_instance().is_owned_by_other():
                     transaction_conf = conf[GameCardProperties.TRANSACTION]
                     if GameCardProperties.TRANSACTION_SPECIAL in transaction_conf:
                         amount_source = transaction_conf[GameCardProperties.TRANSACTION_SPECIAL][GameCardProperties.TRANSACTION_SPECIAL_AMOUNT_SOURCE]
                         factor = transaction_conf[GameCardProperties.TRANSACTION_SPECIAL][GameCardProperties.TRANSACTION_SPECIAL_FACTOR]
                         if "dice" == amount_source:
-                            GameState.pay_owner_rent_by_dice(factor)
+                            Monopoly.get_instance().pay_owner_rent_by_dice(factor)
                         elif "rent" == amount_source:
-                            GameState.pay_owner_rent(factor)
+                            Monopoly.get_instance().pay_owner_rent(factor)
 
     @staticmethod
     def _apply_transaction_card(conf: Dict[str, Any]):
@@ -78,23 +78,23 @@ class GameCard(object):
         if "collect" == transaction_type:
             source = transaction_conf[GameCardProperties.TRANSACTION_SOURCE]
             if "bank" == source:
-                GameState.collect_from_bank(amount)
+                Monopoly.get_instance().collect_from_bank(amount)
             elif "players" == source:
-                GameState.collect_from_players(amount)
+                Monopoly.get_instance().collect_from_players(amount)
         elif "pay" == transaction_type:
             destination = transaction_conf[GameCardProperties.TRANSACTION_DESTINATION]
             house_cost = transaction_conf[GameCardProperties.TRANSACTION_HOUSE_COST]
             hotel_cost = transaction_conf[GameCardProperties.TRANSACTION_HOTEL_COST]
             if "bank" == destination:
                 if house_cost and hotel_cost:
-                    GameState.pay_per_building(house_cost=house_cost, hotel_cost=hotel_cost)
+                    Monopoly.get_instance().pay_per_building(house_cost=house_cost, hotel_cost=hotel_cost)
                 else:
-                    GameState.pay_to_bank(amount)
+                    Monopoly.get_instance().pay_to_bank(amount)
             elif "players" == destination:
-                GameState.pay_to_players(amount)
+                Monopoly.get_instance().pay_to_players(amount)
 
     @staticmethod
     def _apply_special_card(conf: Dict[str, Any]):
         special_conf = conf[GameCardProperties.SPECIAL]
         if GameCardProperties.SPECIAL_JAIL in special_conf:
-            GameState.send_to_jail()
+            Monopoly.get_instance().send_to_jail()

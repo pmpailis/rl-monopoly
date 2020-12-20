@@ -1,6 +1,6 @@
 import json
 
-from typing import List
+from typing import List, Tuple
 
 from player import Player
 
@@ -25,54 +25,3 @@ class GameState(object):
     def to_json(self):
         return json.dumps(self)
 
-    @classmethod
-    def move_current_player_place(cls, place):
-        pass
-
-    @classmethod
-    def move_current_player_position(cls, position):
-        pass
-
-    @classmethod
-    def move_current_player_group(cls, movement_type, movement_group):
-        pass
-
-    @classmethod
-    def collect_from_bank(cls, amount):
-        pass
-
-    @classmethod
-    def collect_from_players(cls, amount):
-        pass
-
-    @classmethod
-    def pay_to_bank(cls, amount):
-        pass
-
-    @classmethod
-    def pay_to_players(cls, amount):
-        pass
-
-    @classmethod
-    def pay_per_building(cls, house_cost, hotel_cost):
-        pass
-
-    @classmethod
-    def pay_owner_by_dice(cls, factor):
-        pass
-
-    @classmethod
-    def is_owned_by_other(cls):
-        pass
-
-    @classmethod
-    def pay_owner_rent_by_dice(cls, factor):
-        pass
-
-    @classmethod
-    def pay_owner_rent(cls, factor):
-        pass
-
-    @classmethod
-    def send_to_jail(cls):
-        pass
