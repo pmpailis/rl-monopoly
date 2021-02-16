@@ -14,4 +14,4 @@ class Dice(object):
     def roll_dice():
         dice_a = random.randint(MIN_VALUE, MAX_VALUE)
         dice_b = random.randint(MIN_VALUE, MAX_VALUE)
-        return dice_a + dice_b
+        return dice_a, dice_b
