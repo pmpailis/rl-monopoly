@@ -41,6 +41,7 @@ class Monopoly(object):
         self._game_state = GameState(players=players)
         self._board = Board(resources_path=resources_path)
         self._round = 0
+        self.rolled_double = 0
 
     @staticmethod
     def get_instance():
@@ -90,6 +91,10 @@ class Monopoly(object):
         logging.info("Moving player")
         dice_roll = self._dice.roll_dice()
         logging.info("Rolled " + str(dice_roll))
+        if dice_roll[0] == dice_roll[1]:
+            self.rolled_double += 1
+        else:
+            self.rolled_double = 0
         self._game_state.move_player(sum(dice_roll))
 
     def player_action(self) -> None:
@@ -123,7 +128,10 @@ class Monopoly(object):
         pass
 
     def post_round(self) -> None:
-        self._game_state.next_player()
+        if self.rolled_double == 0:
+            self._game_state.next_player()
+        elif self.rolled_double == 3:
+            self._game_state.get_current_player().set_in_jail(True)
         self._round += 1
 
     def game_completed(self) -> None:

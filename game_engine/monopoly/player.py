@@ -44,8 +44,9 @@ class Player(object):
     def get_rent_level(self, position):
         return self._buildings[position]
 
-    def set_in_jail(self, in_jail: bool) -> None:
+    def set_in_jail(self, in_jail: bool, jail_position=10) -> None:
         self._in_jail = in_jail
+        self._position = jail_position
 
     def print(self) -> str:
         return self._name + " - $" + str(self._money) + " - at position: " + str(self._position)
