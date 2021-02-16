@@ -4,8 +4,10 @@ import logging
 from typing import List, Tuple
 
 from monopoly.board import BOARD_POSITIONS
-from monopoly.dice import Dice
 from monopoly.player import Player
+
+START_MONEY = 1500
+PASS_GO_MONEY = 200
 
 
 class GameState(object):
@@ -17,13 +19,16 @@ class GameState(object):
         :param players: a list of all the players present in this game
         """
         self._players = players
-        self._properties = None
         self._houses = 32
         self._hotels = 12
         self._mortgages = None
         self._current_player = 0
 
-    def to_json(self):
+    def init_players(self) -> None:
+        for player in self.get_players():
+            player.update_amount(START_MONEY)
+
+    def to_json(self) -> str:
         return json.dumps(self)
 
     def get_players(self) -> List[Player]:
@@ -33,31 +38,24 @@ class GameState(object):
         return self._players[self._current_player]
 
     def get_current_player_position(self) -> int:
-        return self._players[self._current_player].position
+        return self._players[self._current_player].get_position()
 
-    def init_players(self) -> None:
-        for player in self.get_players():
-            player.add_amount(1500)
-
-    def move_player(self, position: int):
+    def move_player(self, position: int) -> None:
         current_position = self.get_current_player_position()
-        next_position = (int(current_position) + int(position)) % BOARD_POSITIONS
-        logging.info("Moving player to position: " + str(next_position))
+        next_position = (int(current_position) + int(position))
+        if next_position >= BOARD_POSITIONS:
+            self.get_current_player().update_amount(amount=PASS_GO_MONEY)
+            next_position = next_position % BOARD_POSITIONS
         self.get_current_player().move_to(next_position)
 
-    def move_player_to(self, position):
-        logging.info("Moving player to position: " + str(position))
+    def move_player_to(self, position: int) -> None:
+        if self.get_current_player_position() > position:
+            self.get_current_player().update_amount(amount=PASS_GO_MONEY)
         self.get_current_player().move_to(position)
 
-    def next_player(self):
+    def next_player(self) -> None:
         self._current_player = (self._current_player + 1) % len(self._players)
 
-    def player_in_jail(self):
-        return self.get_current_player().in_jail
-
-    def get_owner(self, position):
-        owner = [x for x in self._players if x.owns(position)]
+    def get_owner(self, position: int) -> Tuple[Player, None]:
+        owner = [x for x in self._players if x.owns_property(position)]
         return owner[0] if owner else None
-
-    def get_rent_level(self, position):
-        return self.get_owner(position).buildings[position]

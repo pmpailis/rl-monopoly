@@ -21,3 +21,7 @@ class UserInterface(abc.ABC):
     @abc.abstractmethod
     def print_state(self, game_state: GameState):
         pass
+
+    @abc.abstractmethod
+    def player_property_buys(self, game_state: GameState):
+        pass

@@ -37,9 +37,3 @@ class GameCardProperties:
     HOTEL_COST = "hotel_cost"
     GROUP = "group"
     TYPE = "type"
-
-
-class GameCard(object):
-
-    def __init__(self, conf: Dict[str, Any]):
-        self._conf = conf

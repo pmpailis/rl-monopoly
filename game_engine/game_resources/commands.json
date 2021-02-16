@@ -170,9 +170,11 @@
       {
         "card_type": "chance",
         "text": "Advance token to the nearest Railroad and pay owner twice the rental to which he/she is otherwise entitled. If Railroad is unowned, you may buy it from the Bank.",
-        "relative": {
-        	"type": "nearest",
-        	"group": "railways"
+        "movement": {
+          "relative": {
+            "type": "nearest",
+            "group": "utilities"
+          }
         },
         "transaction":{
         	"special": {
@@ -237,11 +239,6 @@
         "text": "Take a trip to Reading Railroad – if you pass Go collect $200",
         "movement": {
         	"fixed": "reading_railroad"
-        },
-        "transaction": {
-        	"amount": 200,
-        	"type": "collect",
-        	"source": "bank"
         }
       },
       {
