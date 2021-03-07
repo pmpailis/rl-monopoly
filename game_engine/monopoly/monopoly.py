@@ -1,6 +1,7 @@
 from functools import wraps
 from typing import List, Dict, Any, Callable, Union
 
+from monopoly.action import Action
 from monopoly.dice import Dice
 from monopoly.game_cards import GameCardProperties, GameCardCommands
 from monopoly.board import Board, BOARD_POSITIONS
@@ -111,7 +112,7 @@ class Monopoly(object):
         if self.is_owned_by_other(position):
             owner = self._game_state.get_owner(position)
             logging.info("Property '" + self._board.get_property(position)[GameCardProperties.DISPLAY_NAME] + "' is owned by " + str(owner.get_name()))
-            self.pay_rent(owner, position)
+            self.pay_rent(current_player=self._game_state.get_current_player(), owner=owner, position=position)
         else:
             bought = self.player_buys(position)
             if bought:
@@ -169,17 +170,20 @@ class Monopoly(object):
         amount = rent[rent_level] * factor
         self.transaction(source=current_player, destination=owner, amount=amount)
 
-    def transaction(self, source: Union[Player, None], destination: Union[Player, None], amount: int) -> None:
+    @staticmethod
+    def transaction(source: Union[Player, None], destination: Union[Player, None], amount: int) -> bool:
         logging.info((source.get_name() if source is not None else "Bank") + " is ordered to pay " + str(amount) + " to " + (destination.get_name() if destination is not None else "Bank"))
         if source is not None:
             if not source.has_sufficient_funds(amount):
                 logging.info("Player " + source.get_name() + " cannot afford paying " + str(amount))
+                return False
             source.update_amount(-amount)
         if destination is not None:
             destination.update_amount(amount)
             logging.info(str(amount) + " has been credited to " + destination.get_name())
+        return True
 
-    def collect_from_bank(self, amount) -> None:
+    def collect_from_bank(self, amount) -> bool:
         return self.transaction(source=None, destination=self._game_state.get_current_player(), amount=amount)
 
     def collect_from_players(self, current_player: Player, amount: int) -> None:
@@ -282,8 +286,17 @@ class Monopoly(object):
         owner = self._game_state.get_owner(position)
         return owner is not None and owner != self._game_state.get_current_player()
 
-    def player_buys(self, position):
-        self._ui.player_property_buys(position)
+    def player_buys(self, position) -> bool:
+        action = self._ui.player_property_buys(game_state=self._game_state, position=position)
+        if action == Action.BUY_PROPERTY:
+            property_card = self._board.get_property(position)
+            logging.info('Player ' + self._game_state.get_current_player().get_name() + " tries to buy property: " + property_card[GameCardProperties.DISPLAY_NAME])
+            if self._game_state.get_current_player().has_sufficient_funds(property_card[GameCardProperties.PRICE]):
+                logging.info("Property bought")
+                self._game_state.get_current_player().add_property(property_card)
+                return True
+            else:
+                logging.info("Player cannot afford to buy")
         return False
 
     def start_bidding_war(self, position):

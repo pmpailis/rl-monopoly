@@ -3,6 +3,7 @@ from functools import wraps
 from time import strftime
 from datetime import datetime
 
+from monopoly.action import Action
 from monopoly.state import GameState
 from ui.ui import UserInterface
 
@@ -41,5 +42,6 @@ class CommandLineInterface(UserInterface):
     def print_state(self, game_state: GameState):
         print_message("\tPlayers:" + "\n\t\t".join(["%d - %s" % (i + 1, x.print()) for i, x in enumerate(game_state.get_players())]))
 
-    def player_property_buys(self, position: int):
+    def player_property_buys(self, game_state: GameState, position: int):
         print_message("Do you want to buy property: " + str(position))
+        return Action.BUY_PROPERTY

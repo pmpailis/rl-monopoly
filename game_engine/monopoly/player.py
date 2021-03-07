@@ -50,3 +50,7 @@ class Player(object):
 
     def print(self) -> str:
         return self._name + " - $" + str(self._money) + " - at position: " + str(self._position)
+
+    def add_property(self, game_property: Dict) -> None:
+        self._properties.append(game_property)
+        self._buildings[game_property[GameCardProperties.POSITION]] = 0
